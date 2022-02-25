@@ -1,0 +1,85 @@
+@import './resets';
+@import './variables';
+
+@mixin container($direction, $justify, $align) {
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@media (max-width: 600px) {
+    body{
+        font-family: $font-text;
+    }
+
+    .heading {
+        @include container(row, center, center);    
+        &__logo {
+            margin: 10px auto;
+        }  
+    }
+
+    .location {
+        @include container(row, center, center);
+        background-color: darken($color-background, 10%);
+        width: 100%;
+        height: 45px;
+        margin: 0;
+        gap: 15px;
+    }
+   
+    .search{
+        @include container(column, center, center);
+        background-color: $color-background;
+
+        &__content{
+            @include container(column, center, center);
+
+            &__title {
+                font-size: 18px;
+                text-align: center;
+                padding: 30px;
+                margin: 0;
+            }
+
+            &__text {
+                font-size: 14px;
+                font-weight: lighter;
+                text-align: center;
+
+            }
+
+            &__button {
+                border: none;
+                margin: 30px;
+                font-weight: bold;
+                padding: 15px;
+                box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+                transition: all 0.3s ease-out;               
+                color: white;
+                width: 230px;
+                border-radius: 25px; 
+                background-image: linear-gradient(to right bottom, $color-secundary, $color-primary)
+            }
+        }
+    }
+
+    .__image {
+        width: 300px;
+        height: 180px;
+        border-radius: 15px 15px 0px 0;
+    }
+    
+    .logo-footer {
+        width: 100px;
+    }
+
+}
