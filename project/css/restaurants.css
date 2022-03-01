@@ -1,0 +1,194 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-family: "Roboto";
+  }
+  main {
+    padding-bottom: 7.5rem;
+  }
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  .header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 60px;
+    margin: 20px 0 10px 20px;
+  }
+  .header-content a {
+    text-decoration: none;
+  }
+  .header-content i {
+    font-size: 16px;
+    color: black;
+    padding-left: 10px;
+  }
+  .logo {
+    width: 150px;
+  }
+  .main-content {
+    background-color: #F6F6F6;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    top: -60px;
+    padding: 0 15px 0 15px;
+    height: 100%;
+  }
+  .image {
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .title {
+    font-family: "Shrikhand";
+    font-size: 25px;
+    font-weight: normal;
+    padding: 30px 0 10px 20px;
+  }
+  .category-title {
+    text-transform: uppercase;
+    font-weight: thin;
+    font-size: 16px;
+    border-bottom: solid 3px #99E2D0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 30px 0 10px 10px;
+    padding-bottom: 5px;
+  }
+  .text-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    background-color: white;
+    padding: 10px 15px 5px 15px;
+    width: 100%;
+    height: 65px;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(50, 50, 50, 0.22);
+            box-shadow: 5px 5px 10px 0px rgba(50, 50, 50, 0.22);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    margin-top: 15px;
+  }
+  .text-box h3 {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+  .text-position p {
+    font-size: 14px;
+    font-weight: thin;
+  }
+  .text-position span {
+    font-weight: bold;
+  }
+  .text-position {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .btn-position {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .btn-position__button {
+    border: none;
+    margin: 50px;
+    font-weight: medium;
+    padding: 15px;
+    -webkit-box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+            box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: white;
+    width: 170px;
+    border-radius: 25px;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+    background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  }
+  .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: #2a2a2a;
+    padding: 20px 0 30px 20px;
+    gap: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+  }
+  .logo-footer {
+    width: 100px;
+    -webkit-filter: invert(100%) sepia(100%) saturate(100%);
+            filter: invert(100%) sepia(100%) saturate(100%);
+    padding-bottom: 10px;
+  }
+  .footer-content a {
+    text-decoration: none;
+    color: white;
+  }
+  i {
+    font-size: 14px;
+    padding-right: 5px;
+  }
+}
+/*# sourceMappingURL=restaurants.css.map */

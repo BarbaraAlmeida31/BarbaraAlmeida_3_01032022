@@ -6,122 +6,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="./css/restaurants.css">
     <!-- Normalizer -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
     <!-- Font Awesome - CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link href="css/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/de17894230.js" crossorigin="anonymous"></script>
     <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <title>Document</title>
+    <!-- Font Shrikhand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <title>The Full Palette</title>
 </head>
 
 <body>
-    <header>
-        <i class="fa-solid fa-arrow-left"></i>
-        <img src="images/logo/ohmyfood@2x.svg" alt="logo">
-    </header>
-
-    <main>
-        <div>
-            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="The Full Pallet restaurant">
-            <h1>The Full Palette</h1>
-        </div>
-
-        <section>
-            <p>Entrees</p>
-
-            <div>
-                <h3>Escargot</h3>
-                <p>With southern French spices</p>
-                <p>25€</p>
+    <div id="page-container">
+        <header>
+            <div class="header-content">
+                <a href="./homepage.html"><i class="fa-solid fa-arrow-left"></i></a>
+                <a href="./homepage.html"><img class="logo" src="images/logo/ohmyfood@2x.svg" alt="logo"></a>
             </div>
+        </header>
 
-            <div>
-                <h3>Duck Foie Gras</h3>
-                <p>With black truffle shavings</p>
-                <p>35€</p>
+        <main>
+            <img class="image" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="The Full Pallet restaurant">
+
+            <div class="main-content">
+                <h1 class="title">The Full Palette</h1>
+
+                <section>
+                    <p class="category-title">Entrees</p>
+
+                    <div class="text-box">
+                        <h3>Escargot</h3>
+                        <div class="text-position">
+                            <p>With southern French spices </p>
+                            <span>25€</span>
+                        </div>
+                    </div>
+
+                    <div class="text-box">
+                        <h3>Duck Foie Gras</h3>
+                        <div class="text-position">
+                            <p>With black truffle shavings </p>
+                            <span>35€</span>
+                        </div>
+                    </div>
+
+                    <div class="text-box">
+                        <h3>Fried egg</h3>
+                        <div class="text-position">
+                            <p>...</p>
+                            <span>20€</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <p class="category-title">Main Dish</p>
+
+                    <div class="text-box">
+                        <h3>Herb-Encrusted Steak</h3>
+                        <div class="text-position">
+                            <p>With delicately sliced and seasoned veg...</p>
+                            <span>40€</span>
+                        </div>
+                    </div>
+
+                    <div class="text-box">
+                        <h3>Ox Tail Shepard's Pie</h3>
+                        <div class="text-position">
+                            <p>With black truffle and pureed parsnips</p>
+                            <span>35€</span>
+                        </div>
+                    </div>
+
+                    <div class="text-box">
+                        <h3>Filet of Sole</h3>
+                        <div class="text-position">
+                            <p>With citrus dressing</p>
+                            <span>44€</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <p class="category-title">Desserts</p>
+
+                    <div class="text-box">
+                        <h3>Paris-Brest</h3>
+                        <div class="text-position">
+                            <p>Revisted</p>
+                            <span>18€</span>
+                        </div>
+                    </div>
+
+                    <div class="text-box">
+                        <h3>Chocolate Macaroons</h3>
+                        <div class="text-position">
+                            <p>With vanilla ice cream</p>
+                            <span>22€</span>
+                        </div>
+                    </div>
+
+                    <div class="text-box">
+                        <h3>Chocolate Mousse</h3>
+                        <div class="text-position">
+                            <p>With spices and black truffle</p>
+                            <span>23€</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="btn-position">
+                    <button class="btn-position__button">Order</button>
+                </div>
             </div>
+        </main>
 
-            <div>
-                <h3>Fried egg</h3>
-                <p>...</p>
-                <p>20€</p>
-            </div>
-        </section>
 
-        <section>
-            <p>Main Dish</p>
+        <footer class="footer-content">
 
-            <div>
-                <h3>Herb-Encrusted Steak</h3>
-                <p>With delicately sliced and seasoned veg...</p>
-                <p>40€</p>
-            </div>
+            <img class="logo-footer" src="images/logo/ohmyfood@2x.svg" alt="logo-footer">
 
-            <div>
-                <h3>Ox Tail Shepard's Pie</h3>
-                <p>With black truffle and pureed parsnips</p>
-                <p>35€</p>
-            </div>
+            <a href="#">
+                <i class="fa-solid fa-utensils"></i>
+                Sugest a restaurant
+            </a>
 
-            <div>
-                <h3>Filet of Sole</h3>
-                <p>With citrus dressing</p>
-                <p>44€</p>
-            </div>
-        </section>
+            <a href="#">
+                <i class="fa-solid fa-handshake-angle"></i>
+                Became a partner
+            </a>
 
-        <section>
-            <p>Desserts</p>
+            <a href="#">Legal</a>
 
-            <div>
-                <h3>Paris-Brest</h3>
-                <p>Revisted</p>
-                <p>18€</p>
-            </div>
-
-            <div>
-                <h3>Chocolate Macaroons</h3>
-                <p>With vanilla ice cream</p>
-                <p>22€</p>
-            </div>
-
-            <div>
-                <h3>Chocolate Mousse</h3>
-                <p>With spices and black truffle</p>
-                <p>23€</p>
-            </div>
-        </section>
-
-        <div>
-            <button>Order</button>
-        </div>
-    </main>
-
-    <footer>
-        <img src="images/logo/ohmyfood.png" alt="logo-footer">
-
-        <a href="#">
-            <i class="fa-solid fa-utensils"></i>
-            <p>Sugest a restaurant</p>
-        </a>
-
-        <a href="#">
-            <i class="fa-solid fa-handshake-angle"></i>
-            <p>Became a partner</p>
-        </a>
-
-        <a href="#">Legal</a>
-
-        <a href="#">Contact</a>
-    </footer>
-
+            <a href="#">Contact</a>
+        </footer>
+    </div>
 </body>
+
 
 </html>
