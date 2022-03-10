@@ -75,32 +75,52 @@
     margin: 30px 0 10px 10px;
     padding-bottom: 5px;
   }
-  .text-box {
+  .items {
+    -webkit-animation-name: menu;
+            animation-name: menu;
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+  .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: space-between;
-        -ms-flex-align: space-between;
-            align-items: space-between;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: white;
-    padding: 10px 15px 5px 15px;
     width: 100%;
     height: 65px;
     border-radius: 15px;
     -webkit-box-shadow: 5px 5px 10px 0px rgba(50, 50, 50, 0.22);
             box-shadow: 5px 5px 10px 0px rgba(50, 50, 50, 0.22);
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    margin-top: 15px;
+    margin-bottom: 10px;
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+  .text-box {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px;
+  }
+  .text-box:active {
+    cursor: pointer;
+    overflow: hidden;
+    width: 80%;
+  }
+  .text-box:active + .select-bar {
+    width: 20%;
+    opacity: 1;
+  }
+  .text-box:active + .select-bar > .select-bar__check {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   .text-box h3 {
     font-size: 16px;
@@ -124,6 +144,34 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .select-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #99E2D0;
+    border-radius: 0 15px 15px 0;
+    width: 0;
+    height: 65px;
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+  }
+  .select-bar__check {
+    color: white;
+    font-size: 18px;
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
   }
   .btn-position {
     display: -webkit-box;
@@ -189,6 +237,50 @@
   i {
     font-size: 14px;
     padding-right: 5px;
+  }
+  @-webkit-keyframes menu {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  @keyframes menu {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
   }
 }
 /*# sourceMappingURL=restaurants.css.map */
