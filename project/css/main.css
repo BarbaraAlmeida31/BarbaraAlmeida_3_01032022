@@ -5,9 +5,43 @@
   padding: 0;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 370px) {
   body {
     font-family: "Roboto";
+  }
+  .loading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    -webkit-animation: loading 2.5s ease;
+            animation: loading 2.5s ease;
+    position: absolute;
+    top: 300px;
+    width: 100%;
+  }
+  .loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px double lightgray;
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-radius: 50%;
+  }
+  #page-container {
+    -webkit-animation: load-content 3s;
+            animation: load-content 3s;
   }
   .heading {
     display: -webkit-box;
@@ -106,8 +140,15 @@
     background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   }
+  .search__content__button:hover {
+    opacity: 0.8;
+    -webkit-box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.55);
+            box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.55);
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
   .how-works {
-    padding: 40px 20px 40px 35px;
+    padding: 40px 20px 40px 10px;
   }
   .title {
     font-size: 20px;
@@ -135,8 +176,8 @@
     background-color: #9356DC;
     padding: 8px;
     border-radius: 50%;
-    position: absolute;
-    left: 25px;
+    position: relative;
+    left: 10px;
   }
   .text-box {
     display: -webkit-box;
@@ -212,6 +253,7 @@
   }
   .card p {
     font-size: 16px;
+    font-weight: thin;
     color: black;
     margin: 5px 0 10px 10px;
   }
@@ -231,6 +273,31 @@
     border-radius: 15px 15px 0px 0;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .text-position {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 20px;
+  }
+  .heart {
+    color: lightgray;
+    font-size: 20px;
+  }
+  .heart:hover {
+    color: #9356DC;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
   }
   .footer-content {
     display: -webkit-box;
@@ -263,6 +330,90 @@
   i {
     font-size: 14px;
     padding-right: 5px;
+  }
+  @-webkit-keyframes loading {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(1turn);
+              transform: rotate(1turn);
+      opacity: 0;
+    }
+  }
+  @keyframes loading {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(1turn);
+              transform: rotate(1turn);
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes load-content {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes load-content {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  #page-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .header-content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 55%;
+  }
+  img {
+    max-width: 100%;
+    border: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  #page-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  img {
+    max-width: 100%;
+    border: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

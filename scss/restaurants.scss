@@ -8,19 +8,19 @@
     align-items: $align;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 370px) {
     body{
         font-family: $font-text;
-        
-    }
-
-    main {
-        padding-bottom: 7.5rem;
     }
 
     #page-container {
         position: relative;
         min-height: 100vh;
+    }
+
+
+    main {
+        padding-bottom: 7.5rem;
     }
 
     .header-content {
@@ -74,12 +74,6 @@
         padding-bottom: 5px;
     }
 
-    .items {
-       animation-name: menu;
-       animation-duration: 2000ms;
-
-    }
-
     .card {
         display: flex;
         justify-content: space-between;
@@ -90,19 +84,33 @@
         box-shadow: 5px 5px 10px 0px rgba(50, 50, 50, 0.22);
         margin-bottom: 10px;
 
+        opacity: 0;
         animation-name: fadeIn;
-        animation-duration: 2000ms;
+        animation-timing-function: easy-in;
+        -o-animation-duration:  1;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
 
+    }
+
+    .one {
+        animation-delay: 0.75s;
+    }
+
+    .two {
+        animation-delay: 1.2s;
+    }
+
+    .three {
+        animation-delay: 1.6s;
     }
 
     .text-box {
         width: 100%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         padding: 10px;
-        &:active {
+
+        &:hover {
             cursor: pointer;
-            overflow: hidden;
             width: 80%;
             & + .select-bar {
                 width: 20%;
@@ -125,10 +133,14 @@
     .text-position p {
         font-size: 14px;
         font-weight: thin;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     .text-position span {
         font-weight: bold;
+        padding-left: 5px;
     }
 
     .text-position {
@@ -173,6 +185,11 @@
             width: 170px;
             border-radius: 25px; 
             background-image: linear-gradient(to right bottom, $color-secundary, $color-primary);
+            &:hover {
+                opacity: 0.8;
+                box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.55);
+                transition: all 0.5s ease-out;               
+            }
         }
     }
 
@@ -204,25 +221,47 @@
         padding-right: 5px;
     }
 
-    @keyframes menu {
-        0% {
-            transform: scaleY(0);
-            transform-origin: top;
-        }
-        100% {
-            transform: scaleY(1);
-        }
-    }
-
     @keyframes fadeIn {
         0% {
+            opacity: 0;
             transform: translateY(15px);
 
         }
         100% {
             transform: translateY(0);
+            opacity: 1;
         }
     }
 
 
+}
+
+@media (min-width: 810px) {
+    #page-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .header-content{
+        justify-content: space-between;
+        max-width: 55%;
+    }
+
+    img {
+        max-width: 100%;
+        border: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    #page-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    img {
+        max-width: 100%;
+        border: 0;
+    }
+    
 }
