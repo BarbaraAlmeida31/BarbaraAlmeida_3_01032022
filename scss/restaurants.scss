@@ -27,29 +27,17 @@
         @include container(row, flex-start, center);
         gap: 60px;
         margin: 20px 0 10px 20px;
-    }
-
-    .header-content a {
-        text-decoration: none;
-    }
-
-    .header-content i {
-        font-size: 16px;
-        color: black;
-        padding-left: 10px;
-    }
-
-    .logo{
-        width: 150px;
-    }
-
-    .main-content{
-        background-color: $color-background;
-        border-radius: 40px 40px 0 0;
-        position: relative;
-        top: -60px;
-        padding: 0 15px 0 15px;
-        height: 100%;
+        & a {
+            text-decoration: none;
+        }
+        & i {
+            font-size: 16px;
+            color: black;
+            padding-left: 10px;
+        }
+        &__logo{
+            width: 150px;
+        }
     }
 
     .image {
@@ -58,15 +46,24 @@
         object-fit: cover;
     }
 
-    .title{
-        font-family: $font-logo-titles;
-        font-size: 25px;
-        font-weight: normal;
-        padding: 30px 0 10px 20px;
+    .menu-content {
+        background-color: $color-background;
+        border-radius: 40px 40px 0 0;
+        position: relative;
+        top: -60px;
+        padding: 0 15px 0 15px;
+        height: 100%;
+        &__name{
+            font-family: $font-logo-titles;
+            font-size: 25px;
+            font-weight: normal;
+            padding: 30px 0 10px 20px;
+        }
     }
+
     .category-title{
         text-transform: uppercase;
-        font-weight: thin;
+        font-weight: 300;
         font-size: 16px;
         border-bottom: solid 3px $color-tertiary;
         width:fit-content;
@@ -86,25 +83,23 @@
 
         opacity: 0;
         animation-name: fadeIn;
-        animation-timing-function: easy-in;
+        transition-timing-function: ease-in;
         -o-animation-duration:  1;
         animation-fill-mode: forwards;
         animation-duration: 1.5s;
-
+        &__one {
+            animation-delay: 0.70s;
+        }
+        &__two {
+            animation-delay: 1.2s;
+        }
+        &__three {
+            animation-delay: 1.6s;
+        }
+        &__four {
+            animation-delay: 2s;
+        }
     }
-
-    .one {
-        animation-delay: 0.75s;
-    }
-
-    .two {
-        animation-delay: 1.2s;
-    }
-
-    .three {
-        animation-delay: 1.6s;
-    }
-
     .text-box {
         width: 100%;
         padding: 10px;
@@ -122,33 +117,32 @@
                 }
             }
         }
-    }
+        & h3 {
+            font-size: 16px;
+            padding-bottom: 5px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
 
-
-    .text-box h3 {
-        font-size: 16px;
-        padding-bottom: 5px;
-    }
-
-    .text-position p {
-        font-size: 14px;
-        font-weight: thin;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
-
-    .text-position span {
-        font-weight: bold;
-        padding-left: 5px;
+        }
     }
 
     .text-position {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-   }
-    
+        & p {
+            font-size: 14px;
+            font-weight: 300;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        & span {
+            font-weight: bold;
+            padding-left: 5px;
+        }
+    }
 
     .select-bar {
         display: flex;
@@ -172,12 +166,12 @@
     }
 
 
-    .btn-position {
+    .btn-container {
         @include container(row,center , center);
         &__button {
             border: none;
             margin: 50px;
-            font-weight: medium;
+            font-weight: 500;
             padding: 15px;
             box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
             transition: all 0.3s ease-out;               
@@ -194,31 +188,26 @@
     }
 
     .footer-content {
-    @include container(column, flex-start, flex-start);
-    background-color: darken($color-background, 80%);
-    padding: 20px 0 30px 20px;
-    gap: 10px;
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-
-    }
-
-
-    .logo-footer {
-        width: 100px;
-        filter: invert(100%) sepia(100%) saturate(100%);
-        padding-bottom: 10px;
-    }
-
-    .footer-content a {
-        text-decoration: none;
-        color: white;
-    }
-
-    i {
-        font-size: 14px;
-        padding-right: 5px;
+        @include container(column, flex-start, flex-start);
+        background-color: darken($color-background, 80%);
+        padding: 20px 0 30px 20px;
+        gap: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        &__logo {
+            width: 100px;
+            filter: invert(100%) sepia(100%) saturate(100%);
+            padding-bottom: 10px;
+        }
+        & a {
+            text-decoration: none;
+            color: white;
+        }
+        & i {
+            font-size: 14px;
+            padding-right: 5px;
+        }
     }
 
     @keyframes fadeIn {

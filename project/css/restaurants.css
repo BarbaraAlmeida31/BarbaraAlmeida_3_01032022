@@ -41,16 +41,8 @@
     color: black;
     padding-left: 10px;
   }
-  .logo {
+  .header-content__logo {
     width: 150px;
-  }
-  .main-content {
-    background-color: #F6F6F6;
-    border-radius: 40px 40px 0 0;
-    position: relative;
-    top: -60px;
-    padding: 0 15px 0 15px;
-    height: 100%;
   }
   .image {
     width: 100%;
@@ -58,7 +50,15 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .title {
+  .menu-content {
+    background-color: #F6F6F6;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    top: -60px;
+    padding: 0 15px 0 15px;
+    height: 100%;
+  }
+  .menu-content__name {
     font-family: "Shrikhand";
     font-size: 25px;
     font-weight: normal;
@@ -66,7 +66,7 @@
   }
   .category-title {
     text-transform: uppercase;
-    font-weight: thin;
+    font-weight: 300;
     font-size: 16px;
     border-bottom: solid 3px #99E2D0;
     width: -webkit-fit-content;
@@ -92,25 +92,29 @@
     opacity: 0;
     -webkit-animation-name: fadeIn;
             animation-name: fadeIn;
-    -webkit-animation-timing-function: easy-in;
-            animation-timing-function: easy-in;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
     -o-animation-duration: 1;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
   }
-  .one {
-    -webkit-animation-delay: 0.75s;
-            animation-delay: 0.75s;
+  .card__one {
+    -webkit-animation-delay: 0.70s;
+            animation-delay: 0.70s;
   }
-  .two {
+  .card__two {
     -webkit-animation-delay: 1.2s;
             animation-delay: 1.2s;
   }
-  .three {
+  .card__three {
     -webkit-animation-delay: 1.6s;
             animation-delay: 1.6s;
+  }
+  .card__four {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
   }
   .text-box {
     width: 100%;
@@ -134,17 +138,9 @@
   .text-box h3 {
     font-size: 16px;
     padding-bottom: 5px;
-  }
-  .text-position p {
-    font-size: 14px;
-    font-weight: thin;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-  }
-  .text-position span {
-    font-weight: bold;
-    padding-left: 5px;
   }
   .text-position {
     display: -webkit-box;
@@ -157,6 +153,17 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .text-position p {
+    font-size: 14px;
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .text-position span {
+    font-weight: bold;
+    padding-left: 5px;
   }
   .select-bar {
     display: -webkit-box;
@@ -186,7 +193,7 @@
     -webkit-transition-duration: 500ms;
             transition-duration: 500ms;
   }
-  .btn-position {
+  .btn-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -201,10 +208,10 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .btn-position__button {
+  .btn-container__button {
     border: none;
     margin: 50px;
-    font-weight: medium;
+    font-weight: 500;
     padding: 15px;
     -webkit-box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
             box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
@@ -216,7 +223,7 @@
     background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   }
-  .btn-position__button:hover {
+  .btn-container__button:hover {
     opacity: 0.8;
     -webkit-box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.55);
             box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.55);
@@ -244,7 +251,7 @@
     position: absolute;
     bottom: 0px;
   }
-  .logo-footer {
+  .footer-content__logo {
     width: 100px;
     -webkit-filter: invert(100%) sepia(100%) saturate(100%);
             filter: invert(100%) sepia(100%) saturate(100%);
@@ -254,7 +261,7 @@
     text-decoration: none;
     color: white;
   }
-  i {
+  .footer-content i {
     font-size: 14px;
     padding-right: 5px;
   }
