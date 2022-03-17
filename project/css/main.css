@@ -40,8 +40,8 @@
     border-radius: 50%;
   }
   #page-container {
-    -webkit-animation: load-content 3s;
-            animation: load-content 3s;
+    -webkit-animation: load-content 3s ease-in;
+            animation: load-content 3s ease-in;
   }
   .heading {
     display: -webkit-box;
@@ -294,11 +294,11 @@
   .heart {
     color: lightgray;
     font-size: 20px;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
   }
   .heart:hover {
     color: #9356DC;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
   }
   .footer-content {
     display: -webkit-box;
@@ -361,30 +361,22 @@
   @-webkit-keyframes load-content {
     0% {
       opacity: 0;
-      -webkit-transform: translateY(50px);
-              transform: translateY(50px);
     }
     80% {
       opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
       opacity: 1;
     }
   }
   @keyframes load-content {
     0% {
       opacity: 0;
-      -webkit-transform: translateY(50px);
-              transform: translateY(50px);
     }
     80% {
       opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
       opacity: 1;
     }
   }

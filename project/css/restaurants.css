@@ -130,8 +130,6 @@
   }
   .text-box:hover + .select-bar > .select-bar__check {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
@@ -186,8 +184,6 @@
     color: white;
     font-size: 18px;
     opacity: 0;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
     -webkit-transform: rotate(1turn);
             transform: rotate(1turn);
     -webkit-transition-duration: 500ms;

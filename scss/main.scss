@@ -2,7 +2,7 @@
 @import './variables';
 
 @mixin container($direction, $justify, $align) {
-    display:flex;
+    display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
@@ -13,10 +13,11 @@
         font-family: $font-text;
     }
 
+
     .loading-page {
         @include container(row, center, center);
         opacity: 0;
-        animation: loading 2.5s ease;
+        animation: loading 2.5s ease; // call animation to loading spinner 
         position: absolute;
         top: 300px;
         width: 100%;
@@ -33,7 +34,7 @@
     }
 
     #page-container {
-        animation: load-content 3s;
+        animation: load-content 3s ease-in; // animation to appears the page content after 
     }
 
     .heading {
@@ -196,12 +197,12 @@
         padding-right: 20px;
     }
 
-    .heart {
+    .heart {                                      // animation like button
         color: lightgray;
         font-size: 20px;
+        transition: color 0.5s ease-in-out;
         &:hover {
             color: $color-primary;
-            transition-duration: 0.5s;
         }
     }
 
@@ -242,7 +243,6 @@
     @keyframes load-content {
         0% {
             opacity: 0;
-            transform: translateY(50px);
         }
 
         80% {
@@ -250,14 +250,13 @@
         }
 
         100% {
-            transform: translateY(0);
             opacity: 1;
         }
     }
 
 }
 
-@media (min-width: 810px) {
+@media (min-width: 810px) { // tablet version
     #page-container {
         max-width: 600px;
         margin: 0 auto;
@@ -274,7 +273,7 @@
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1280px) { // desktop version
     #page-container {
         max-width: 600px;
         margin: 0 auto;
