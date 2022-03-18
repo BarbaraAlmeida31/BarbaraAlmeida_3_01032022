@@ -1,6 +1,10 @@
-# Project Summary
+# Access the project 
 
-Access the project through [this link](https://github.com/BarbaraAlmeida31/BarbaraAlmeida_3_01032022).
+Access the Git Repository through [this link](https://github.com/BarbaraAlmeida31/BarbaraAlmeida_3_01032022).
+
+Access the sithe through [this link](https://barbaraalmeida31.github.io/BarbaraAlmeida_3_01032022/project/homepage.html).
+
+# Project Summary
 
 Ohmyfood is a new startup that wants to make a name for itself in the restaurant business. The objective is to develop a 100% mobile-friendly site that lists the menus of gourmet restaurants. 
 
