@@ -256,7 +256,7 @@
 
 }
 
-@media (max-width: 810px) { // tablet version
+@media (min-width: 810px) { // tablet version
     #page-container {
         max-width: 100%;
         margin: 0 auto;
